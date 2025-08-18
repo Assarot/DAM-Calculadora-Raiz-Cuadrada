@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CalulatorRoot</string>
+    <string name="title">Calcula la raiz de cualquier número!</string>
+    <string name="title_2">Ingresa un número:</string>
+    <string name="btn_calcular">Calcular</string>
+    <string name="txt_view">Resultado: </string>
+    <string name="number_box">Ejemplo: 8 </string>
+    <string name="ingresa_numero">Ingresa un número:</string>
+</resources>
