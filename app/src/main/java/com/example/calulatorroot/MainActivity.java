@@ -38,17 +38,21 @@ public class MainActivity extends AppCompatActivity {
                 String input = number.getText().toString().trim();
 
                 if (!input.isEmpty()) {
-                    double numero = Double.parseDouble(input);
+                    try {
+                        double numero = Double.parseDouble(input);
 
-                    if (numero >= 0) {
-                        double resultado = Math.sqrt(numero);
+                        if (numero >= 0) {
+                            double resultado = Math.sqrt(numero);
 
-                        // Formatear con 5 cifras significativas
-                        String resultadoFormateado = String.format("%.5g", resultado);
+                            // Formatear SIEMPRE con 2 decimales
+                            String resultadoFormateado = String.format("%.2f", resultado);
 
-                        result.setText("Resultado: " + resultadoFormateado);
-                    } else {
-                        result.setText("Error: número negativo");
+                            result.setText("Resultado: " + resultadoFormateado);
+                        } else {
+                            result.setText("Error: número negativo");
+                        }
+                    } catch (NumberFormatException e) {
+                        result.setText("Error: ingresa un número válido");
                     }
                 } else {
                     result.setText("Por favor, ingresa un número");
